@@ -1,6 +1,7 @@
+require('dotenv').config();
 const server = require('./server');
  
-const port = process.env.WEB_PORT || 8085;
+const port = process.env.WEB_PORT || 8080;
 
 server.create()
 .then(app => {

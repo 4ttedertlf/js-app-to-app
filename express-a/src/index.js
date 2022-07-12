@@ -1,8 +1,8 @@
-const server = require('./server');
- 
+import { create } from './server.js';
+
 const port = process.env.WEB_PORT || 8080;
 
-server.create()
+create()
 .then(app => {
     app.listen(port, () => {
         console.log(`Server has started on port ${port}!`);
